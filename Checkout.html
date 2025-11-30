@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Checkout</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --offwhite: #fffbe2;
+    --pink: #ff9be9;
+    --black: #363137;
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background:var(--offwhite);
+    color: var(--text-dark);
+  }
+
+  .container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 1fr 350px;
+    gap: 40px;
+  }
+
+  /* Section titles */
+  h2 {
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--black);
+    margin-bottom: 20px;
+  }
+
+  .section {
+    border: 1px solid var(--black);
+    padding: 25px;
+    border-radius: 16px;
+  }
+
+  label {
+    font-weight: 500;
+    margin-bottom: 5px;
+    display: block;
+  }
+
+  input, select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid var(--black);
+    outline: none;
+    margin-bottom: 18px;
+    font-size: 14px;
+  }
+
+  input:focus, select:focus {
+    border-color: var(--black);
+  }
+
+  /* Order summary box */
+  .summary {
+    background: var(--pink);
+    padding: 25px;
+    border-radius: 16px;
+    border: 1px solid #d9d9ef;
+  }
+
+  .summary-item {
+    display: flex;
+    justify-content: space-between;
+    margin: 14px 0;
+    font-size: 15px;
+  }
+
+  .summary-total {
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 20px;
+    border-top: 1px solid var(--black);
+    padding-top: 20px;
+  }
+
+  .btn-pay {
+    width: 100%;
+    background: var(--black);
+    color: #fff;
+    padding: 16px;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+
+  .btn-pay:hover {
+    background: grey;
+  }
+
+  /* Mobile responsive */
+  @media (max-width: 900px) {
+    .container {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- LEFT SIDE : FORM -->
+  <div>
+
+    <!-- Shipping -->
+    <div class="section">
+      <h2>Shipping Information</h2>
+
+      <label>Full Name</label>
+      <input type="text" placeholder="Your name">
+
+      <label>Email Address</label>
+      <input type="email" placeholder="your@email.com">
+
+      <label>Phone Number</label>
+      <input type="text" placeholder="+92 -----------">
+
+      <label>Street Address</label>
+      <input type="text" placeholder="House #, Street, Area">
+
+      <label>City</label>
+      <input type="text" placeholder="Lahore">
+
+      <label>Province</label>
+      <select>
+        <option>Punjab</option>
+        <option>Sindh</option>
+        <option>KPK</option>
+        <option>Balochistan</option>
+        <option>Gilgit Baltistan</option>
+      </select>
+
+      <label>Postal Code</label>
+      <input type="text" placeholder="54000">
+
+    </div>
+
+    <!-- Payment -->
+    <div class="section" style="margin-top:30px;">
+      <h2>Payment Method</h2>
+
+      <label>Card Number</label>
+      <input type="text" placeholder="1234 5678 9012 3456">
+
+      <label>Name on Card</label>
+      <input type="text" placeholder="Your Name">
+
+      <div style="display:flex; gap:20px;">
+        <div style="flex:1;">
+          <label>Expiry Date</label>
+          <input type="text" placeholder="MM/YY">
+        </div>
+        <div style="flex:1;">
+          <label>CVC</label>
+          <input type="text" placeholder="123">
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- RIGHT SIDE : ORDER SUMMARY -->
+  <div class="summary">
+
+    <h2>Order Summary</h2>
+
+    <div class="summary-item">
+      <span>Cookie Box (x1)</span>
+      <span>Rs 2,200</span>
+    </div>
+    <div class="summary-item">
+      <span>Shipping</span>
+      <span>Rs 250</span>
+    </div>
+    <div class="summary-item">
+      <span>Tax</span>
+      <span>Rs 80</span>
+    </div>
+
+    <div class="summary-total">
+      <span>Total</span>
+      <span>Rs 2,530</span>
+    </div>
+
+    <button class="btn-pay">Pay Now</button>
+
+  </div>
+
+</div>
+
+</body>
+</html>
