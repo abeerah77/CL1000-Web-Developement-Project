@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Menu - Swirl</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background: #ffe4ec;
+            overflow-x: hidden;
+        }
+
+        /* NAVBAR */
+        .navbar {
+            width: 100%;
+            padding: 20px 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo {
+            width: 250px;
+        }
+
+        /* Buttons at top */
+        nav .nav-btn {
+            padding: 10px 22px;
+            margin-left: 12px;
+            background-color: #ff6f91;
+            color: white;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s ease;
+        }
+
+        /* Hover effect */
+        nav .nav-btn:hover {
+            background-color: #ff3d6f;
+            transform: scale(1.12);
+            box-shadow: 0px 4px 15px rgba(255, 60, 120, 0.5);
+        }
+
+        /* MENU SECTION */
+        .menu-section {
+            padding: 50px 60px;
+            text-align: center;
+        }
+
+        .menu-title {
+            font-size: 48px;
+            margin-bottom: 40px;
+            color: #ff3d6f;
+        }
+
+        .menu-items {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+        }
+
+        .menu-item {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            width: 280px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: 0.3s ease;
+        }
+
+        .menu-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        .menu-item img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .item-name {
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .item-price {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: #ff3d6f;
+        }
+
+        .add-to-cart {
+            padding: 10px 20px;
+            background-color: #ff6f91;
+            color: white;
+            border: none;
+            border-radius: 30px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .add-to-cart:hover {
+            background-color: #ff3d6f;
+            transform: scale(1.05);
+        }
+
+        /* FOOTER */
+        .site-footer {
+            background-color: #ff6f91;
+            color: white;
+            padding: 40px 60px;
+            text-align: center;
+        }
+
+        .site-footer .footer-links {
+            margin-top: 15px;
+        }
+
+        .site-footer .footer-links a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .site-footer .footer-links a:hover {
+            color: #fff0f5;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="logo-area">
+            <img src="logo2.png" alt="Logo" class="logo">
+        </div>
+
+        <nav>
+            <a href="index.html" class="nav-btn">Home</a>
+            <a href="index.html#story" class="nav-btn">Our Story</a>
+            <a href="contact.html" class="nav-btn">Contact</a>
+            <a href="#" id="loginBtn" class="nav-btn">Login</a>
+        </nav>
+    </header>
+
+    <!-- MENU SECTION -->
+    <section class="menu-section">
+        <h1 class="menu-title">Our Donuts</h1>
+        
+        <div class="menu-items">
+            <div class="menu-item">
+                <img src="menu1.png" alt="Chocolate Boom">
+                <div class="item-name">Chocolate Boom</div>
+                <div class="item-price">Rs. 550</div>
+                <a href="Cart.html" class="add-to-cart">Add to Cart</a>
+            </div>
+            
+            <div class="menu-item">
+                <img src="menu2.png" alt="Strawberry Swirl">
+                <div class="item-name">Strawberry Swirl</div>
+                <div class="item-price">Rs. 550</div>
+                <a href="Cart.html" class="add-to-cart">Add to Cart</a>
+            </div>
+            
+            <div class="menu-item">
+                <img src="menu3.png" alt="Vanilla Dream">
+                <div class="item-name">Vanilla Dream</div>
+                <div class="item-price">Rs. 550</div>
+                <a href="Cart.html" class="add-to-cart">Add to Cart</a>
+            </div>
+            
+            <div class="menu-item">
+                <img src="menu4.png" alt="Caramel Crunch">
+                <div class="item-name">Caramel Crunch</div>
+                <div class="item-price">Rs. 550</div>
+                <a href="Cart.html" class="add-to-cart">Add to Cart</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p>&copy; 2025 Swirl Donut. All Rights Reserved.</p>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="#story">Our Story</a>
+                <a href="contact.html">Contact</a>
+                <a href="#">Login</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple function to show a quick message when adding to cart
+        document.querySelectorAll('.add-to-cart').forEach(button => {
+            button.addEventListener('click', function(e) {
+                // Optional: You can add a quick confirmation here
+                // alert('Added to cart! Going to cart page...');
+                
+                // The page will automatically navigate to Cart.html
+                // because it's a regular link
+            });
+        });
+    </script>
+    
+</body>
+</html>
